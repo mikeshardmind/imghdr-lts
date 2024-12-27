@@ -1,0 +1,19 @@
+[project]
+name = "imghdr-lts"
+version = "0.1.0"
+description = "A lift of the removed imghdr module"
+authors = [
+    {name = "Michael H", email = "michael@michaelhall.tech"},
+]
+dependencies = []
+requires-python = ">=3.13"
+readme = "README.md"
+license = {text = "PSF-2.0"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
