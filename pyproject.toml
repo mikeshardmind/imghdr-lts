@@ -1,19 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "imghdr-lts"
-version = "0.1.0"
-description = "A lift of the removed imghdr module"
-authors = [
-    {name = "Michael H", email = "michael@michaelhall.tech"},
-]
-dependencies = []
+description = "LTS Port of Python imghdr"
 requires-python = ">=3.13"
+version = "1.0.0"
 readme = "README.md"
-license = {text = "PSF-2.0"}
+license = { text = "PSF-2.0" }
+maintainers = [{ name = "Michael Hall", email = "michael@michaelhall.tech" }]
 
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
 
+[project.urls]
+Homepage = "https://github.com/mikeshardmind/imghdr-lts"
 
-[tool.pdm]
-distribution = true
+[tool.setuptools]
+packages = ["imghdr"]
+
+[tool.pyright]
+pythonVersion = "3.13"
+typeCheckingMode = "strict"
+include = ["imghdr"]
+
+reportPrivateUsage = "none"
+reportUnnecessaryTypeIgnoreComment = "warning"
